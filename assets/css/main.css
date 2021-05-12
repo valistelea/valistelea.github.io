@@ -1778,6 +1778,7 @@ input, select, textarea {
 		#nav a {
 			position: relative;
 			display: inline-block;
+			font-weight: 600;
 			color: #ffffff;
 			width: 1em;
 			height: 1em;
@@ -1823,6 +1824,7 @@ input, select, textarea {
 				color: #ffffff;
 				top: -2.75em;
 				font-size: 0.3em;
+				font-family: 'Source Sans Pro', sans-serif;
 				height: 2.25em;
 				line-height: 2.25em;
 				left: 50%;
