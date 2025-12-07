@@ -446,6 +446,10 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
+        .contact-form iframe {
+            display: block;
+        }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -527,13 +531,30 @@
                 display: flex;
             }
 
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
             }
 
-            .about-content,
-            .contact-content {
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -750,7 +771,6 @@
                         style="border:none;">
                 </iframe>
             </div>
-			
         </div>
     </section>
 
@@ -764,6 +784,12 @@
     </footer>
 
     <script>
+        // Prevent automatic scroll on page load
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
         // Mobile menu toggle
         const mobileMenu = document.getElementById('mobileMenu');
         const navLinks = document.getElementById('navLinks');
