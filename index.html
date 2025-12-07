@@ -1,174 +1,810 @@
-<!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZC89D7E9HF"></script>
-		<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-  		gtag('config', 'G-ZC89D7E9HF');
-		</script>
-		<title>VS | Website</title>
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-		<link rel="manifest" href="images/site.webmanifest">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentin Stelea | Product Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		<!-- Wrapper-->
-			<div id="wrapper">
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#about" class="icon solid fa-address-card"><span>About Me</span></a>
-						<a href="#work" class="icon solid fa-code"><span>Portfolio</span></a>
-						<a href="#contact" target="_blank" class="icon solid fa-paper-plane"><span>Contact</span></a>
-						<a href="https://www.linkedin.com/in/valentinstelea" target="_blank" class="fab fa-linkedin"><span>LinkedIn</span></a>
-						
-					</nav>
+        :root {
+            --primary: #1a0dab;
+            --secondary: #5f6368;
+            --accent: #1967d2;
+            --bg-dark: #0a0a0a;
+            --bg-card: #ffffff;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --border: #e8eaed;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-				<!-- Main -->
-					<div id="main">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: #f8f9fa;
+            overflow-x: hidden;
+        }
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Valentin Stelea</h1>
-									<p>APM @ <img src="images/visa.png" alt="" width="55" height="20"/> | Georgia Tech CS '23 &#128029</p>
-								</header>
-								<a href="#about" class="jumplink pic">
-									<!-- <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span> -->
-									<img src="images/img3.JPEG" alt=""/>
-								</a>
-							</article>
-						
-						<!-- About Me -->
-						<article id="about" class="panel">
-							<header>
-								<h2>About Me &#128516</h2>
-							</header>
-							<p>
-								<ul>
-								<li>I was born in Bucharest, &#127479;&#127476.</li>
-								<li>Currently in San Francisco, &#127482;&#127480.</li>
-								<li>Hobbies: &#9917, &#127934, &#127947;&#65039, &#127757, &#127859, &#127918, &#128187, &#128179.</li>
-								<li>Jobs of Interest: Product Management</li>
-								<li>Tech that interest me: FinTech, Cryptocurrency, Machine Learning & AI. </li>
-								<li>Currently an Associate Product Manager (APM) @Visa</li>
-								<li>Teams I worked on: Global Consumer Debit, AI/ML Platform Team</li>
-								<!-- <li>My GitHub: <a href="https://github.com/valistelea" target="_blank">Link</a></li> -->
-								</ul>
-								<!-- <br> -->
-								<p>With a background in software engineering, I transitioned into product management to combine my technical expertise with a focus on creating exceptional user experiences. 
-								I proudly graduated with highest honors from Georgia Tech, earning a B.S. in Computer Science. With my multi-cultural up-bringing and proficiency in three languages, 
-								I seek to bring a unique perspective to product management, aiming to deliver impactful and user-centric products.
-								</p>
-								<h2>Resume:</h2>
-								<br><center>
-									<iframe frameborder="0" scrolling="no"
-									width="820" height="1050"
-									src="https://drive.google.com/file/d/1baHJYg13Zh_SJc94GH9oONnBbAEeV-d8/preview">
-								 </iframe></center>	
-							</p>
-							<!-- <section>
-		
-									<!-- <div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" width="400" height="300"></a>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit"><img src="images/pic08.jpg" alt="" width="400" height="300"></a>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit"><img src="images/pic09.jpg" alt="" width="400" height="300"></a>
-									</div> -->
-								<!-- </div>
-							</section> -->
-						</article>
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
 
-						
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>My Portfolio &#128193</h2>
-								</header>
-								<p>
-									My projects range from creating and programing hardware sensors for cars, to sports data analytics, 
-									currency converters using API's, software applications reducing food waste, and much more!  
-									<br><center>Click on the images below to learn more! &#128516</center>	
-								</p>
-								<section>
-					
-									<div class="row">
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://drive.google.com/file/d/1_eF5ZobK67N-ZmfJd2-Cch4hXFmt3_Bt/view?usp=sharing" target="_blank" class="image"><img src="images/img3.png" alt="Jupyter Notebook" width="400" height="300"></a>
-											<center><p>Season analysis and data visualization of soccer team (FCSB) using Python, Jupyter Notebooks. </p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://vali-and-karthik-projects-site.herokuapp.com/computeConv" target="_blank" class="image"><img src="images/img4.jpeg" alt="Currency Converter" width="400" height="300"></a>
-											<center><p>Using Fixer.io API, this currency converter yields exchange & FOREX rates for 170 currencies.</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://foodflip.herokuapp.com/home" target="_blank" class="image"><img src="images/FF_1.png" alt="Food Flip" width="400" height="300"></a>
-											<center><p>Software application to reduce food waste & improve food distribution for those in need. Helped feed 110 people.</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://www.youtube.com/watch?v=VbFL5UGBNfo" target="_blank" class="image"><img src="images/pxfarm.png" alt="Digital Farm" width="400" height="300"></a>
-											<center><p>Using Agile Principles and Iterative Development, developed an interactive farm simulation application using JavaFX in a team of 5.</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://coinscouter.herokuapp.com/" target="_blank" class="image"><img src="images/crypto.jpeg" alt="CoinScouter" width="400" height="300"></a>
-											<center><p>Using React.js, Chart.js, and CoinGecko API, this dashboard retrieves realtime and historical data about desired currencies.</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://docs.google.com/document/d/1i1JLalR_bpmjKF7Nol96JARQ6lMg3_61Da_MmF1tlhY/edit?usp=sharing" target="_blank" class="image"><img src="images/img5.png" alt="Arduino Sensors" width="400" height="300"></a>
-											<center><p>Ultrasonic and Infrared Sensors meant to help improve driver safety in low visibility situations.</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://vali-and-karthik-projects-site.herokuapp.com/computeResult" target="_blank" class="image"><img src="images/img6.png" alt="Pi Calculator" width="400" height="300"></a>
-											<center><p>Approximator of π using Machin & Arctan Taylor Series formulas, as well as Monte Carlo method.</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://neocirc.netlify.app/" target="_blank" class="image"><img src="images/neocirc.png" alt="NeoCirc" width="400" height="300"></a>
-											<center><p>I worked in a team to create an educational platform for teaching doctors, nurses, & parents about neonatal circumcision for our clients. Click 
-												<a href="https://docs.google.com/document/d/1J1JPfynWqPsSDOVeij6Vx3mEBrPd5J11vJl2Z-VpGAE/edit?usp=sharing" target="_blank">here</a> to learn more
+        nav.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
 
-											</p></center>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" target="_blank" class="image"><img src="images/img_CS.jpeg" alt=""></a>
-											
-										</div> 
-										<!-- <div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic09.jpg" alt="" width="400" height="300"></a>
-										</div> -->
-									</div>
-								</section>
-							</article>
-						<!-- Contact -->
-						<article id="contact" class="panel">
-							<script type="text/javascript" defer src="https://form.123formbuilder.com/embed/5910507.js" data-role="form" data-default-width="650px">
-							</script><!-- form.123formbuilder.com script ends here -->
-						</article>
-					</div>
-			</div>
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-	</body>
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            color: white;
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            animation: fadeInLeft 0.8s ease;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: #f1f3f4;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stat-card.clickable {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .stat-card.clickable h4 {
+            color: white;
+            -webkit-text-fill-color: white;
+        }
+
+        .stat-card.clickable p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .stat-card h4 {
+            font-size: 2.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: #f1f3f4;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e8eaed;
+            border-radius: 10px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">VS</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="images/img3.JPEG" alt="Valentin Stelea">
+            </div>
+            <div class="hero-text">
+                <h1>Valentin Stelea</h1>
+                <p>Product Manager @ Visa | Georgia Tech CS '23 🐝</p>
+                <p>Building innovative financial products that empower millions of users worldwide</p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Product leader combining technical expertise with strategic thinking</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>From Bucharest 🇷🇴 to San Francisco 🇺🇸</h3>
+                <p>With a background in software engineering, I transitioned into product management to combine my technical expertise with a focus on creating exceptional user experiences.</p>
+                <p>I proudly graduated with highest honors from Georgia Tech, earning a B.S. in Computer Science. With my multi-cultural upbringing and proficiency in three languages, I bring a unique perspective to product management, aiming to deliver impactful and user-centric products.</p>
+                <div class="skills">
+                    <span class="skill-tag">Product Strategy</span>
+                    <span class="skill-tag">FinTech</span>
+                    <span class="skill-tag">AI/ML</span>
+                    <span class="skill-tag">Cryptocurrency</span>
+                    <span class="skill-tag">Data Analytics</span>
+                    <span class="skill-tag">Agile</span>
+                    <span class="skill-tag">UX Design</span>
+                    <span class="skill-tag">API Development</span>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <h4>4+</h4>
+                    <p>Teams at Visa</p>
+                </div>
+                <div class="stat-card">
+                    <h4>3</h4>
+                    <p>Languages</p>
+                </div>
+                <div class="stat-card clickable" onclick="window.open('https://www.linkedin.com/in/valentinstelea/', '_blank')">
+                    <h4>in</h4>
+                    <p>Connect on LinkedIn</p>
+                </div>
+                <div class="stat-card">
+                    <h4>🎓</h4>
+                    <p>Georgia Institute of Technology '23<br>B.S. Computer Science</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-header">
+            <h2>My Portfolio</h2>
+            <p>Projects showcasing technical excellence and product thinking</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="project-card" onclick="window.open('https://drive.google.com/file/d/1_eF5ZobK67N-ZmfJd2-Cch4hXFmt3_Bt/view?usp=sharing', '_blank')">
+                <div class="project-image">⚽</div>
+                <div class="project-content">
+                    <h3>Sports Analytics Dashboard</h3>
+                    <p>Season analysis and data visualization of soccer team (FCSB) using Python and Jupyter Notebooks.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Data Viz</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://vali-and-karthik-projects-site.herokuapp.com/computeConv', '_blank')">
+                <div class="project-image">💱</div>
+                <div class="project-content">
+                    <h3>Currency Converter</h3>
+                    <p>Using Fixer.io API, this converter yields exchange & FOREX rates for 170 currencies.</p>
+                    <div class="project-tags">
+                        <span class="tag">API</span>
+                        <span class="tag">FinTech</span>
+                        <span class="tag">Web App</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://foodflip.herokuapp.com/home', '_blank')">
+                <div class="project-image">🍽️</div>
+                <div class="project-content">
+                    <h3>FoodFlip</h3>
+                    <p>Software application to reduce food waste & improve distribution. Helped feed 110+ people.</p>
+                    <div class="project-tags">
+                        <span class="tag">Social Impact</span>
+                        <span class="tag">Full Stack</span>
+                        <span class="tag">UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=VbFL5UGBNfo', '_blank')">
+                <div class="project-image">🌾</div>
+                <div class="project-content">
+                    <h3>Digital Farm Simulator</h3>
+                    <p>Interactive farm simulation using Agile principles and JavaFX developed with a team of 5.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">Team Project</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://coinscouter.herokuapp.com/', '_blank')">
+                <div class="project-image">₿</div>
+                <div class="project-content">
+                    <h3>CoinScouter</h3>
+                    <p>Crypto dashboard with React.js, Chart.js, and CoinGecko API for real-time data.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Crypto</span>
+                        <span class="tag">Real-time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://neocirc.netlify.app/', '_blank')">
+                <div class="project-image">🏥</div>
+                <div class="project-content">
+                    <h3>NeoCirc Platform</h3>
+                    <p>Educational platform for medical professionals on neonatal circumcision procedures.</p>
+                    <div class="project-tags">
+                        <span class="tag">EdTech</span>
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">Client Work</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <h2>Let's Connect</h2>
+            <p>Always open to discussing product opportunities and collaborations</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>San Francisco, CA</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h4>Current Role</h4>
+                        <p>Product Manager @ Visa</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🎯</div>
+                    <div>
+                        <h4>Interests</h4>
+                        <p>FinTech, AI/ML, Cryptocurrency</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <iframe src="https://form.123formbuilder.com/embed/5910507.js" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        style="border:none;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/valentinstelea" target="_blank">in</a>
+            <a href="https://github.com/valistelea" target="_blank">gh</a>
+            <a href="mailto:valentin@example.com">@</a>
+        </div>
+        <p>&copy; 2024 Valentin Stelea. Built with passion & purpose.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
 </html>
