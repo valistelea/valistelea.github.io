@@ -192,6 +192,10 @@
             font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
         }
 
         .btn-primary {
@@ -213,6 +217,20 @@
         .btn-secondary:hover {
             background: white;
             color: #667eea;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-outline:hover {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
 
         @keyframes fadeInUp {
@@ -378,7 +396,6 @@
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: white;
         }
 
         .project-content {
@@ -439,41 +456,56 @@
             font-size: 1.5rem;
         }
 
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
         .contact-form {
             background: white;
             padding: 2rem;
             border-radius: 20px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            display: none;
+        }
+
+        .contact-form.active {
+            display: block;
         }
 
         .contact-form iframe {
             display: block;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .contact-placeholder {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+        .contact-placeholder.hidden {
+            display: none;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e8eaed;
-            border-radius: 10px;
-            font-family: inherit;
-            transition: all 0.3s ease;
+        .contact-placeholder h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
+        .contact-placeholder p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
         /* Footer */
@@ -762,8 +794,17 @@
                         <p>FinTech, AI/ML, Cryptocurrency</p>
                     </div>
                 </div>
+                <div class="contact-buttons">
+                    <button class="btn btn-outline" id="loadFormBtn">
+                        📝 Send a Message
+                    </button>
+                </div>
             </div>
-            <div class="contact-form">
+            <div class="contact-placeholder" id="contactPlaceholder">
+                <h3>Ready to Connect?</h3>
+                <p>Click "Send a Message" to load the contact form, or reach out directly via LinkedIn.</p>
+            </div>
+            <div class="contact-form" id="contactForm">
                 <iframe src="https://form.123formbuilder.com/5910507/my-form" 
                         width="100%" 
                         height="500" 
@@ -789,6 +830,16 @@
             history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
+
+        // Load contact form when button is clicked
+        const loadFormBtn = document.getElementById('loadFormBtn');
+        const contactForm = document.getElementById('contactForm');
+        const contactPlaceholder = document.getElementById('contactPlaceholder');
+
+        loadFormBtn.addEventListener('click', () => {
+            contactPlaceholder.classList.add('hidden');
+            contactForm.classList.add('active');
+        });
 
         // Mobile menu toggle
         const mobileMenu = document.getElementById('mobileMenu');
